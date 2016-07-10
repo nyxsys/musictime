@@ -41,9 +41,9 @@ scalegen.forEach= function(call){
      }
 };
 
-scalegen.noteScale = function(note, interval_type){
-    var interval;
-    
+scalegen.noteScale = function(note/*, interval_type*/){
+    var interval = scalegen.major;
+    /*
     if(interval_type === "major"){
         interval = scalegen.major;
     }
@@ -51,7 +51,7 @@ scalegen.noteScale = function(note, interval_type){
     else{
         return(console.error("invalid interval type"));
     }
-    
+    */
     var scale = [];
     var current = scalegen.get(note);
     var pitch = scalegen.checkPitch(note);
